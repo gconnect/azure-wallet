@@ -37,7 +37,7 @@ export default function PaymentTransaction () {
       await credential.authenticate("https://vault.azure.net/.default");
       
       const client = new SecretClient('https://myalgovault.vault.azure.net/', credential)
-    const secret =  await  client.getSecret('AlgoWallet1')
+      const secret =  await  client.getSecret('AlgoWallet1')
       console.log(secret.value)
       // value = secret.value
       // return value
@@ -46,21 +46,21 @@ export default function PaymentTransaction () {
     }
   }
 
-  const getSecretFromAPI = async () =>{
-    try{
-      const response =  await axios.get('https://myalgovault.vault.azure.net/secrets/AlgoWallet1/5cc886befc9341a7a3ba325b1fb29d79?api-version=7.2/', {
-        headers: {
-          "Authorization": `Bearer ${bearer_token}`,
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-          "withCredentials": true
-        }
-      })
-      console.console.log(response)     
-    }catch(err){
-      console.log(err)
-    }
-  }
+  // const getSecretFromAPI = async () =>{
+  //   try{
+  //     const response =  await axios.get('https://myalgovault.vault.azure.net/secrets/AlgoWallet1/5cc886befc9341a7a3ba325b1fb29d79?api-version=7.2/', {
+  //       headers: {
+  //         "Authorization": `Bearer ${bearer_token}`,
+  //         "Content-Type": "application/json",
+  //         "Accept": "application/json",
+  //         "withCredentials": true
+  //       }
+  //     })
+  //     console.console.log(response)     
+  //   }catch(err){
+  //     console.log(err)
+  //   }
+  // }
 
 
   // console.log(getSecretFromAPI())
