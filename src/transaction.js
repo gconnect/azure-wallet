@@ -50,9 +50,7 @@ export default function PaymentTransaction () {
       const response =  await axios.get('https://myalgovault.vault.azure.net/secrets/AlgoWallet1/5cc886befc9341a7a3ba325b1fb29d79?api-version=7.2/', {
         headers: {
           "Authorization": `Bearer ${bearer_token}`,
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-          "withCredentials": true
+          "Content-Type": "application/json"
         }
       })
       console.console.log(response)     
@@ -61,7 +59,7 @@ export default function PaymentTransaction () {
     }
   }
 
-  getSecretFromAPI()
+  // getSecretFromAPI()
   getSecret()
   return (
       <div>
