@@ -29,7 +29,7 @@ export default function PaymentTransaction () {
       const credential = new InteractiveBrowserCredential(
         {
           tenantId: "cde489b9-3b43-43f8-8c91-0f6380ac8008",
-          clientId: "6054649d-5811-428c-ac19-90193bcfac60"
+          clientId: "476f6cdc-e8e8-4107-bc91-ad5591c2a2dd"
         }
       );
       // Create authenticated client
@@ -59,8 +59,8 @@ export default function PaymentTransaction () {
     }
   }
 
-  getSecretFromAPI()
   getSecret()
+  getSecretFromAPI()
   return (
       <div>
         <h1>Hello World</h1>
