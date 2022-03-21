@@ -59,7 +59,7 @@ export default function PaymentTransaction () {
     }
   }
 
-  // getSecretFromAPI()
+  getSecretFromAPI()
   getSecret()
   return (
       <div>
