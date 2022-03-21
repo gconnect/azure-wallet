@@ -33,9 +33,7 @@ export default function PaymentTransaction () {
         }
       );
       // Create authenticated client
-      // await credential.authenticate("https://vault.azure.net/.default");
-      // await credential.authenticate("https://vault.azure.net");
-      await credential.authenticate("https://login.microsoftonline.com");
+      await credential.authenticate("https://vault.azure.net/.default");
 
       const client = new SecretClient('https://myalgovault.vault.azure.net/', credential)
       const secret =  await  client.getSecret('AlgoWallet1')
